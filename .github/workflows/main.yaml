@@ -26,5 +26,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
          folder: dist
-         branch: github-pages
+         branch: gh-pages
          token: ${{ secrets.technostrea_token }}
