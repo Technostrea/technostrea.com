@@ -18,11 +18,11 @@ jobs:
           node-version: 20
 
       - name: Build Angular app to prod
-        run: npm install && npm run build:prod
+        run: npm install && npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
          folder: dist/browser
-         branch: gh-pages
-         token: ${{ secrets.shuffle_team_token }}
+         branch: github-pages
+         token: ${{ secrets.technostrea_token }}
