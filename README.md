@@ -1,6 +1,6 @@
 # Technostrea.Com
 
-Ce projet est le site web officiel de Technostréa, une entreprise spécialisée dans le développement logiciel.
+Ce projet est le site web officiel de Technostréa, une entreprise spécialisée dans le développement logiciel. https://technostrea.github.io/technostrea.com/
 
 ## Prérequis
 
