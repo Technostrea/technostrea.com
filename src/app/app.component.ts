@@ -3,7 +3,7 @@ import {FooterComponent} from './shared/components/footer/footer.component';
 import {HeaderComponent} from './shared/components/header/header.component';
 import GLightbox from 'glightbox';
 import Swiper from 'swiper';
-import * as AOS from 'aos';
+import AOS from 'aos';
 import {RouterOutlet} from "@angular/router";
 
 @Component({
