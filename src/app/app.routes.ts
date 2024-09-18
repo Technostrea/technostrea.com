@@ -7,6 +7,11 @@ export const routes: Routes = [
     loadChildren: () => import('@app/routes/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'home',
+    title: 'Accueil',
+    loadChildren: () => import('@app/routes/home/home.module').then(m => m.HomeModule)
+  },
+  {
     path: 'about',
     title: 'A propos',
     loadChildren: () => import('@app/routes/about/about.module').then(m => m.AboutModule)

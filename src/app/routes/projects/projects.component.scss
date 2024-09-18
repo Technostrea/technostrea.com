@@ -1,0 +1,33 @@
+.projects-page {
+  .intro-section {
+    background-color: #f8f9fa;
+  }
+
+  .major-projects {
+    .card {
+      transition: transform 0.3s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+
+  .ongoing-projects {
+    .progress {
+      height: 20px;
+      .progress-bar {
+        background-color: #28a745;
+      }
+    }
+  }
+
+  .call-to-action {
+    background-image: url('/assets/images/bg-cta.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    h3, p {
+      color: #fff;
+    }
+  }
+}
