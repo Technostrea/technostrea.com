@@ -1,4 +1,4 @@
-service:
+services:
   techostrea:
     container_name: poc-technostrea
     image: technostrea/poc-technostrea:stabe-alpine
