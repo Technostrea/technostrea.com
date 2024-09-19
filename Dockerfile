@@ -1,5 +1,5 @@
 # ETAPE 1: Construire l'application
-FROM node:20-alpine AS node-builder
+FROM --platform=linux/arm64 node:20-alpine AS node-builder
 
 ARG APP_NAME=technostrea
 ARG ENVIRONMENT=production
@@ -21,7 +21,7 @@ RUN ng build --configuration=$ENVIRONMENT --output-path=dist/
 
 
 # ETAPE 2: Héberger l'application sur un serveur web nginx
-FROM nginx:latest as server
+FROM --platform=linux/arm64 nginx:latest as server
 EXPOSE 80
 EXPOSE 443
 
