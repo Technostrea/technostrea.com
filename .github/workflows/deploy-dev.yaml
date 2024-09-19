@@ -50,8 +50,9 @@ jobs:
           port: ${{ secrets.PI_SSH_PORT }}
           script: |
               cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
+              cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/.env .env
               docker load < technostrea.tar
               rm technostrea.tar
               docker compose pull
-              docker compose --env-file ../poc-traefik/.env up -d
+              docker compose --env-file .env up -d
 
