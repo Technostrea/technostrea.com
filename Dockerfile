@@ -25,8 +25,6 @@ FROM nginx:latest as server
 EXPOSE 80
 EXPOSE 443
 
-platform=linux/arm64/v8
-
 WORKDIR /usr/share/nginx/html
 
 RUN rm -rf /usr/share/nginx/html/*
