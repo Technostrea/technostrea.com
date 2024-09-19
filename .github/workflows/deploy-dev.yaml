@@ -7,9 +7,12 @@ on:
 
   workflow_dispatch: # Déclenchement manuel
 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
+    environment: dev
 
     steps:
       # Checkout le code de la branche
