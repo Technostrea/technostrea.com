@@ -53,5 +53,5 @@ jobs:
               docker load < technostrea.tar
               rm technostrea.tar
               docker compose pull
-              docker compose up -d
+              docker compose --env-file ../poc-traefik/.env up -d
 
