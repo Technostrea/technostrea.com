@@ -6,11 +6,6 @@ services:
       - 80
       - 443
     scale: 1
-    restart: unless-stopped
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "3"
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.technostrea.rule=Host(`${DOMAINE_NAME_OR_STATIC_IP}`) || PathPrefix(`/technostrea`)' # Regle de routage
