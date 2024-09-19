@@ -26,7 +26,7 @@ EXPOSE 80
 
 WORKDIR /usr/share/nginx/html
 
-RUN rm -rf /usr/share/nginx/html/*
+#RUN rm -rf /usr/share/nginx/html/*
 COPY --from=node-builder /app/dist/browser /usr/share/nginx/html
 COPY --from=node-builder /app/nginx.conf /etc/nginx/conf.d/default.conf
 
