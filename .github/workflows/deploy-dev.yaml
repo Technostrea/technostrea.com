@@ -25,7 +25,7 @@ jobs:
 
       # Sauvegarder l'image et transferer dans le serveur de dev
       - name: Save Docker image
-        run: docker save technostrea/poc-technostrea:stabe-lalpine > technostrea.tar
+        run: docker save technostrea/poc-technostrea:stabe-alpine > technostrea.tar
 
       # Copier l'image dans le serveur de dev
       - name: copy file via ssh password
