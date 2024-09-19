@@ -11,7 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     environment: dev
 
     steps:
@@ -21,7 +21,7 @@ jobs:
 
       # Build l'image Docker
       - name: Build Docker image
-        run: docker build -t technostrea/poc-technostrea:stabe-lalpine .
+        run: docker build -t technostrea/poc-technostrea:stabe-alpine .
 
       # Sauvegarder l'image et transferer dans le serveur de dev
       - name: Save Docker image
@@ -36,8 +36,8 @@ jobs:
           key: ${{ secrets.PI_SSH_KEY }}
           port: ${{ secrets.PI_SSH_PORT }}
           rm: true
-          source: "technostrea.tar"
-          target: /home/${{ secrets.PI_USER }}/Documents/poc-projects/
+          source: "technostrea.tar,compose.yaml"
+          target: /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
 
 
       # Decompresser l'image dans le serveur de dev
@@ -49,7 +49,9 @@ jobs:
           key: ${{ secrets.PI_SSH_KEY }}
           port: ${{ secrets.PI_SSH_PORT }}
           script: |
-              cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/
+              cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
               docker load < technostrea.tar
               rm technostrea.tar
+              docker compose pull
+              docker compose up -d
 
