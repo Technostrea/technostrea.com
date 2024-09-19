@@ -51,6 +51,7 @@ jobs:
           script: |
               cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
               cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/.env .env
+              docker rmi technostrea/poc-technostrea:stabe-alpine
               docker load < technostrea.tar
               rm technostrea.tar
               docker compose pull
