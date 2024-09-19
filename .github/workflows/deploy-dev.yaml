@@ -1,0 +1,52 @@
+name: Deploy to Raspberry Pi DEV
+
+on:
+  push:
+    branches:
+      - dev
+
+  workflow_dispatch: # Déclenchement manuel
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout le code de la branche
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Build l'image Docker
+      - name: Build Docker image
+        run: docker build -t technostrea/poc-technostrea:stabe-lalpine .
+
+      # Sauvegarder l'image et transferer dans le serveur de dev
+      - name: Save Docker image
+        run: docker save technostrea/poc-technostrea:stabe-lalpine > technostrea.tar
+
+      # Copier l'image dans le serveur de dev
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.PI_HOST }}
+          username: ${{ secrets.PI_USER }}
+          key: ${{ secrets.PI_SSH_KEY }}
+          port: ${{ secrets.PI_SSH_PORT }}
+          rm: true
+          source: "technostrea.tar"
+          target: /home/${{ secrets.PI_USER }}/Documents/poc-projects/
+
+
+      # Decompresser l'image dans le serveur de dev
+      - name: executing remote ssh commands using ssh-key
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PI_HOST }}
+          username: ${{ secrets.PI_USER }}
+          key: ${{ secrets.PI_SSH_KEY }}
+          port: ${{ secrets.PI_SSH_PORT }}
+          script: |
+              cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/
+              docker load < technostrea.tar
+              rm technostrea.tar
+
