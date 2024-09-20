@@ -7,10 +7,9 @@ on:
 
   workflow_dispatch: # Déclenchement manuel
 
-
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     environment: dev
 
@@ -18,14 +17,6 @@ jobs:
       # Checkout le code de la branche
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      # Build l'image Docker
-      - name: Build Docker image
-        run: docker build -t technostrea/poc-technostrea:stabe-alpine .
-
-      # Sauvegarder l'image et transferer dans le serveur de dev
-      - name: Save Docker image
-        run: docker save technostrea/poc-technostrea:stabe-alpine > technostrea.tar
 
       # Copier l'image dans le serveur de dev
       - name: copy file via ssh password
@@ -36,7 +27,7 @@ jobs:
           key: ${{ secrets.PI_SSH_KEY }}
           port: ${{ secrets.PI_SSH_PORT }}
           rm: true
-          source: "technostrea.tar,compose.yaml"
+          source: "*"
           target: /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
 
 
@@ -51,7 +42,4 @@ jobs:
           script: |
               cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
               cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/.env .env
-              docker load < technostrea.tar
-              rm technostrea.tar
               docker compose --env-file .env up -d
-
