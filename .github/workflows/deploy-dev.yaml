@@ -41,6 +41,8 @@ jobs:
           port: ${{ secrets.PI_SSH_PORT }}
           script: |
               cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
-              cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/.env .env
-              rm -rf .git
-              docker compose --env-file .env up -d
+              cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/poc-traefik/.env .env
+              echo "# Building the docker image"
+              docker build -t technostrea/poc-technostrea:stabe-alpine .
+              echo "# Suppression du dossier"
+              rm -rf /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/*
