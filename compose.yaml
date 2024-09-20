@@ -1,7 +1,9 @@
 services:
   techostrea:
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: poc-technostrea
-    image: technostrea/poc-technostrea:stabe-alpine
     platform: linux/arm64
     expose:
       - 80
