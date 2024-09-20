@@ -39,6 +39,7 @@ jobs:
           username: ${{ secrets.PI_USER }}
           key: ${{ secrets.PI_SSH_KEY }}
           port: ${{ secrets.PI_SSH_PORT }}
+          command_timeout: 30m
           script: |
               cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
               cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/poc-traefik/.env .env
