@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     environment: dev
 
@@ -21,7 +21,7 @@ jobs:
 
       # Build l'image Docker
       - name: Build Docker image
-        run: docker build --platform linux/arm64 -t technostrea/poc-technostrea:stabe-alpine .
+        run: docker buildx build --platform linux/arm64 -t technostrea/poc-technostrea:stabe-alpine .
 
       # Sauvegarder l'image et transferer dans le serveur de dev
       - name: Save Docker image
@@ -53,6 +53,5 @@ jobs:
               cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/.env .env
               docker load < technostrea.tar
               rm technostrea.tar
-              docker compose pull
               docker compose --env-file .env up -d
 
