@@ -1,5 +1,5 @@
 # ETAPE 1: Construire l'application
-FROM --platform=linux/arm64 node:20-alpine AS node-builder
+FROM node:20-alpine AS node-builder
 
 ARG APP_NAME=technostrea
 ARG ENVIRONMENT=production
