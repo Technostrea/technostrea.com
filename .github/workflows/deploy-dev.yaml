@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: raspberrypi4-64
+    runs-on: ubuntu-latest
 
     environment: dev
 
