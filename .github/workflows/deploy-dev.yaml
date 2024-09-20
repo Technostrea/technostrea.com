@@ -10,13 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
-
-    strategy:
-      matrix:
-        include:
-          - arch: aarch64
-            distro: ubuntu22.04
+    runs-on: windows-latest
 
     environment: dev
 
