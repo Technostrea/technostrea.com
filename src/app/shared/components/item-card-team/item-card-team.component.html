@@ -1,0 +1,15 @@
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="team-member d-flex align-items-start">
+    <div class="pic"><img ngSrc="{{user.picture}}" class="img-fluid rounded " alt="{{user.name}}" width="200" height="200" priority></div>
+    <div class="member-info">
+      <h4>{{user.name}}</h4>
+      <span>{{user.role}}</span>
+      <p>{{user.description}}</p>
+      <div class="social">
+        @for (social of user.socialLinks; track social.url){
+          <a href="{{social.url}}" target="_blank"><i class="{{social.className}}"></i></a>
+        }
+      </div>
+    </div>
+  </div>
+</div>

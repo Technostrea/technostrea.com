@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import { AboutRoutingModule } from './about-routing.module';
 
@@ -8,7 +8,8 @@ import { AboutRoutingModule } from './about-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    AboutRoutingModule
+    AboutRoutingModule,
+    NgOptimizedImage
   ]
 })
 export class AboutModule { }
