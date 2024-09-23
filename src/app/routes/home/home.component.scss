@@ -1,0 +1,143 @@
+/* values.component.css */
+#about {
+  .values {
+    padding: 60px 0;
+  }
+
+  .value-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+  }
+
+  .value-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .value-icon img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .value-box h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .value-box p {
+    color: #555;
+  }
+
+  .dark-background {
+    background-color: #f8f9fa;
+  }
+
+}
+
+/* hero.component.css */
+
+/* Style de Fond */
+.hero {
+  background: linear-gradient(to right, #1f2740, #99a5f2); /* Exemple de dégradé */
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Personnalisation des Boutons */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* Ajustements Responsifs */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
+#about {
+  /* about.component.css */
+
+  .about {
+    background-color: #f8f9fa;
+  }
+
+  .about .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .about h3 {
+    font-size: 1.75rem;
+    color: #333;
+  }
+
+  .about p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .about .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+}
+
+/* contact.component.css */
+
+#services {
+  /* services.component.css */
+
+  .services {
+    padding: 60px 0;
+  }
+
+  .service-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-item .icon {
+    font-size: 2.5rem;
+    color: #007bff;
+  }
+
+  .service-item h4 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+  }
+
+  .service-item p {
+    color: #555;
+  }
+
+  .light-background {
+    background-color: #f8f9fa;
+  }
+
+
+}
