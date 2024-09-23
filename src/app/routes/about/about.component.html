@@ -2,67 +2,66 @@
 
   <!-- About Section -->
   <section id="about" class="about section">
-
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
       <h2>Qui sommes-nous</h2>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-      <div class="row">
-        <div class="col- content" data-aos="fade-up" data-aos-delay="100">
-          <p>
-            Technostrea est née de la volonté d'apporter des solutions technologiques innovantes et adaptées aux besoins
-            du quotidien des entreprises et des individus au Congo.<br> Nous sommes une équipe de passionnés, animée par
-            des valeurs d'entraide, de dynamisme et d'ambition.
-            Grâce à notre expertise informatique, nous avons contribué à la croissance technologique au Congo, en
-            apportant des solutions concrètes aux défis quotidiens.<br> Notre équipe est dévouée à la création de
-            technologies durables qui améliorent la qualité de vie et stimulent la performance des entreprises.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="col-" data-aos="fade-up" data-aos-delay="200">
-        <ul>
-          <li><i class="bi bi-check2-circle"></i> <span>Entraide : Nous croyons que la coopération et la bienveillance sont essentielles à la réussite de chaque projet.</span>
-          </li>
-          <li><i class="bi bi-check2-circle"></i> <span>Dynamisme : Nous nous engageons à offrir des solutions rapides et efficaces, en réponse aux besoins évolutifs de nos clients.</span>
-          </li>
-          <li><i class="bi bi-check2-circle"></i> <span>Ambition : Nous dépassons toujours nos limites pour innover et atteindre de nouveaux objectifs.</span>
-          </li>
-        </ul>
-      </div>
     </div>
 
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>
+            Technostrea est née de la volonté d'apporter des solutions technologiques innovantes et adaptées aux besoins du quotidien des entreprises et des individus au Congo. <br> Nous sommes une équipe de passionnés, animée par des valeurs d'entraide, de dynamisme et d'ambition. Grâce à notre expertise informatique, nous avons contribué à la croissance technologique au Congo, en apportant des solutions concrètes aux défis quotidiens. <br> Notre équipe est dévouée à la création de technologies durables qui améliorent la qualité de vie et stimulent la performance des entreprises.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/images/team1.png" class="img-fluid" alt="À propos de Technostrea">
+        </div>
+      </div>
+
+      <div class="row mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col">
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="bi bi-check2-circle text-primary me-2"></i>
+              <strong>Entraide :</strong> Nous croyons que la coopération et la bienveillance sont essentielles à la réussite de chaque projet.
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-check2-circle text-primary me-2"></i>
+              <strong>Dynamisme :</strong> Nous nous engageons à offrir des solutions rapides et efficaces, en réponse aux besoins évolutifs de nos clients.
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-check2-circle text-primary me-2"></i>
+              <strong>Ambition :</strong> Nous dépassons toujours nos limites pour innover et atteindre de nouveaux objectifs.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- /About Section -->
 
-
   <!-- Team Section -->
   <section class="team section">
-
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
       <h2>Notre équipe</h2>
       <p>Découvrez les talents qui façonnent Technostrea</p>
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container">
       <div class="row gy-4">
-
-        @if (aboutTeamService.teams; as teams) {
-
-          @for (user of teams; track user.name) {
-            <app-item-card-team [user]="user"/>
-          }
-        }
-
+        <ng-container *ngIf="aboutTeamService.teams as teams">
+          <div class="col-sm-6 col-md-4" *ngFor="let user of teams; trackBy: trackByUserName">
+            <app-item-card-team [user]="user"></app-item-card-team>
+          </div>
+        </ng-container>
       </div>
     </div>
-
   </section>
   <!-- /Team Section -->
+
+
 
 
   <!-- Why Us Section -->
