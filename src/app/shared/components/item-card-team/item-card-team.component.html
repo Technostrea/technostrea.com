@@ -1,16 +1,18 @@
 <div class="team-member" data-aos="fade-up" data-aos-delay="100">
   <div class="member d-flex flex-column align-items-center">
     <div class="pic mb-3">
-      <img [src]="user.picture" class="img-fluid rounded-circle" alt="{{user.name}}" width="200" height="200">
+      <img ngSrc="{{user.picture}}" class="img-fluid rounded-circle" alt="{{user.name}}" width="200" height="200">
     </div>
     <div class="member-info text-center">
-      <h4>{{user.name}}</h4>
-      <span>{{user.role}}</span>
-      <p>{{user.description}}</p>
+      <h4>{{ user.name }}</h4>
+      <span>{{ user.role }}</span>
+      <p>{{ user.description }}</p>
       <div class="social mt-2">
-        <a *ngFor="let social of user.socialLinks; trackBy: trackBySocialUrl" [href]="social.url" target="_blank">
-          <i class="{{social.className}}"></i>
-        </a>
+        @for (social of user.socialLinks; track social.url) {
+          <a [href]="social.url" target="_blank" class="">
+            <i class="{{social.className}} text-black-50"></i>
+          </a>
+        }
       </div>
     </div>
   </div>

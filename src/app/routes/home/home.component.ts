@@ -1,10 +1,14 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
-import {DataService} from "@app/core/services/data/data.service";
+import {DataService} from "@app/core/services/data/home/data.service";
 import {AdnAnimationComponent} from "@app/shared/components/adn-animation/adn-animation.component";
-import {AboutTeamService} from "@app/routes/about/services/about-team/about-team.service";
+import {AboutTeamService} from "@app/core/services/data/about-team/about-team.service";
 import {RouterLink} from "@angular/router";
 import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-card-team.component";
+import {AboutComponent} from "@app/routes/about/about.component";
+import {ExpertisesComponent} from "@app/routes/expertises/expertises.component";
+import {ProjectsComponent} from "@app/routes/projects/projects.component";
+import {ContactComponent} from "@app/routes/contact/contact.component";
 
 @Component({
   selector: 'app-home',
@@ -16,7 +20,11 @@ import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-
     NgOptimizedImage,
     ItemCardTeamComponent,
     NgForOf,
-    NgIf
+    NgIf,
+    AboutComponent,
+    ExpertisesComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

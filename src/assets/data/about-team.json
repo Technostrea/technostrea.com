@@ -29,7 +29,7 @@
     {
       "name": "Fatimata Diallo",
       "role": "Responsable Marketing",
-      "picture": "./assets/images/user.png",
+      "picture": "https://api.dicebear.com/9.x/thumbs/svg?seed=Felix",
       "description": "Fatimata est en charge de la stratégie de marketing et de communication, assurant la visibilité de Technostrea.",
       "socialLinks": [
         {

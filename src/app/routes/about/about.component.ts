@@ -1,7 +1,6 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
-import {AboutTeamService} from "@app/routes/about/services/about-team/about-team.service";
+import {NgOptimizedImage} from "@angular/common";
 import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-card-team.component";
 
 @Component({
@@ -10,18 +9,11 @@ import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-
   imports: [
     RouterLink,
     NgOptimizedImage,
-    ItemCardTeamComponent,
-    NgForOf,
-    NgIf
+    ItemCardTeamComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  aboutTeamService: AboutTeamService = inject(AboutTeamService);
-
-  trackByUserName(index: number, user: any): string {
-    return user.name;
-  }
 
 }

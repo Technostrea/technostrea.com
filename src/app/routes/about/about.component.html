@@ -1,125 +1,90 @@
-<section class="main" #test>
-
-  <!-- About Section -->
-  <section id="about" class="about section">
+<section class="bg-white" id="about">
+  <article  class="about section py-5">
     <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Qui sommes-nous</h2>
-    </div>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center mb-5">
+        <h2>Qui sommes-nous</h2>
+      </div>
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="row align-items-center">
-        <div class="col-md-6">
+      <div class="row align-items-start">
+        <!-- Colonne Image -->
+        <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left" data-aos-delay="200">
+          <img src="assets/images/team1.png" class="img-fluid rounded" alt="À propos de Technostrea">
+        </div>
+        <!-- Colonne Texte -->
+        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="mb-4">Technostrea, l'innovation au service du Congo</h3>
           <p>
-            Technostrea est née de la volonté d'apporter des solutions technologiques innovantes et adaptées aux besoins du quotidien des entreprises et des individus au Congo. <br> Nous sommes une équipe de passionnés, animée par des valeurs d'entraide, de dynamisme et d'ambition. Grâce à notre expertise informatique, nous avons contribué à la croissance technologique au Congo, en apportant des solutions concrètes aux défis quotidiens. <br> Notre équipe est dévouée à la création de technologies durables qui améliorent la qualité de vie et stimulent la performance des entreprises.
+            La Technostrea est née de la volonté d'apporter des solutions technologiques innovantes et adaptées aux besoins du quotidien des entreprises et des individus au Congo.
           </p>
-        </div>
-        <div class="col-md-6">
-          <img src="assets/images/team1.png" class="img-fluid" alt="À propos de Technostrea">
-        </div>
-      </div>
-
-      <div class="row mt-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="col">
-          <ul class="list-unstyled">
-            <li class="mb-3">
-              <i class="bi bi-check2-circle text-primary me-2"></i>
-              <strong>Entraide :</strong> Nous croyons que la coopération et la bienveillance sont essentielles à la réussite de chaque projet.
-            </li>
-            <li class="mb-3">
-              <i class="bi bi-check2-circle text-primary me-2"></i>
-              <strong>Dynamisme :</strong> Nous nous engageons à offrir des solutions rapides et efficaces, en réponse aux besoins évolutifs de nos clients.
-            </li>
-            <li class="mb-3">
-              <i class="bi bi-check2-circle text-primary me-2"></i>
-              <strong>Ambition :</strong> Nous dépassons toujours nos limites pour innover et atteindre de nouveaux objectifs.
-            </li>
-          </ul>
+          <p>
+            Nous sommes une équipe de passionnés, animée par des valeurs d'entraide, de dynamisme et d'ambition. Grâce à notre expertise informatique, nous avons contribué à la croissance technologique au Congo, en apportant des solutions concrètes aux défis quotidiens.
+          </p>
+          <p>
+            Notre équipe est dévouée à la création de technologies durables qui améliorent la qualité de vie et stimulent la performance des entreprises.
+          </p>
+          <a href="#contact" class="btn btn-primary mt-3">Contactez-nous</a>
         </div>
       </div>
     </div>
-  </section>
-  <!-- /About Section -->
+  </article>
 
-  <!-- Team Section -->
-  <section class="team section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Notre équipe</h2>
-      <p>Découvrez les talents qui façonnent Technostrea</p>
-    </div>
-
-    <div class="container">
-      <div class="row gy-4">
-        <ng-container *ngIf="aboutTeamService.teams as teams">
-          <div class="col-sm-6 col-md-4" *ngFor="let user of teams; trackBy: trackByUserName">
-            <app-item-card-team [user]="user"></app-item-card-team>
-          </div>
-        </ng-container>
+  <article id="values" class="section dark-background">
+    <div class="container" data-aos="fade-up">
+      <!-- Section Header -->
+      <div class="section-header text-center mb-5">
+        <h2>Nos Valeurs</h2>
+        <p class="lead">
+          Chez Technostrea, nous sommes guidés par des valeurs d'entraide, de dynamisme et d’ambition.
+        </p>
       </div>
-    </div>
-  </section>
-  <!-- /Team Section -->
+      <!-- End Section Header -->
 
-
-
-
-  <!-- Why Us Section -->
-  <section id="why-us" class="section why-us light-background" data-builder="section">
-
-    <div class="container-fluid">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-          <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-            <h3><span>Pourquoi choisir Technostrea ?</span></h3>
+      <!-- Values Grid -->
+      <div class="row gy-5">
+        <!-- Value Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="value-box text-center p-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="value-icon mb-4">
+              <img src="assets/images/entraide.svg" class="img-fluid" alt="Entraide" width="80">
+            </div>
+            <h3 class="h4">Entraide</h3>
             <p>
-              Notre équipe combine expertise technique et innovation pour offrir des solutions sur mesure. Nous nous
-              engageons à fournir des services de qualité et à dépasser les attentes de nos clients.
+              Nous accordons une attention particulière à chaque membre de notre équipe, car la bienveillance et l’entraide sont, pour nous, les clés d’un projet réussi.
             </p>
           </div>
+        </div>
+        <!-- End Value Item -->
 
-          <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-item faq-active">
-              <h3><span>01</span> Quelles solutions proposez-vous ?</h3>
-              <div class="faq-content">
-                <p>Nous offrons des solutions allant de la conception de sites web et d'applications à la gestion de
-                  l'infrastructure IT et au conseil stratégique.</p>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div><!-- End Faq item-->
-
-            <div class="faq-item">
-              <h3><span>02</span> Comment garantissez-vous la qualité ?</h3>
-              <div class="faq-content">
-                <p>Nous suivons des processus rigoureux de gestion de projet et effectuons des contrôles qualité à
-                  chaque étape du développement.</p>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div><!-- End Faq item-->
-
-            <div class="faq-item">
-              <h3><span>03</span> Quels sont vos délais moyens de livraison ?</h3>
-              <div class="faq-content">
-                <p>Nous nous engageons à livrer nos projets dans des délais rapides, en fonction de la complexité des
-                  demandes. Contactez-nous pour en savoir plus.</p>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div><!-- End Faq item-->
-
+        <!-- Value Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="value-box text-center p-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="value-icon mb-4">
+              <img src="assets/images/dynamisme.svg" class="img-fluid" alt="Dynamisme" width="80">
+            </div>
+            <h3 class="h4">Dynamisme</h3>
+            <p>
+              Nous nous engageons à répondre efficacement aux besoins de nos clients. Réactifs par nature, nous aimons concrétiser nos projets rapidement.
+            </p>
           </div>
         </div>
+        <!-- End Value Item -->
 
-        <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-          <img src="assets/images/why-us-technostrea.png" class="img-fluid" alt="Pourquoi Technostrea"
-               data-aos="zoom-in" data-aos-delay="100">
+        <!-- Value Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="value-box text-center p-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="value-icon mb-4">
+              <img src="assets/images/ambition.svg" class="img-fluid" alt="Ambition" width="80">
+            </div>
+            <h3 class="h4">Ambition</h3>
+            <p>
+              Aucun projet n’est impossible pour nous. Nous n’hésitons pas à nous dépasser et sommes constamment en quête de nouveaux objectifs et solutions.
+            </p>
+          </div>
         </div>
+        <!-- End Value Item -->
       </div>
-
+      <!-- End Values Grid -->
     </div>
-
-  </section>
-  <!-- /Why Us Section -->
+  </article>
 </section>

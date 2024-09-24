@@ -1,4 +1,4 @@
-<main class="main">
+<main class="main" id="home">
 
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background d-flex align-items-center">
@@ -7,16 +7,16 @@
         <!-- Colonne de Texte -->
         <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
           <h1 class="display-4 mb-4">
-            Bâtissons ensemble le futur technologique du Congo
+            Bâtissons ensemble le futur du Congo
           </h1>
           <p class="lead mb-4">
             Une équipe passionnée dédiée à des solutions innovantes qui améliorent le quotidien grâce à la technologie.
           </p>
           <div class="d-flex flex-wrap">
-            <a href="#projects" class="btn btn-primary btn-lg me-3 mb-2">
+            <a [routerLink]="['']" fragment="projects" class="btn btn-primary btn-lg me-3 mb-2">
               Découvrez nos projets
             </a>
-            <a href="#join-us" class="btn btn-outline-light btn-lg mb-2">
+            <a [routerLink]="['']" fragment="join-us" class="btn btn-outline-light btn-lg mb-2">
               Rejoignez-nous
             </a>
           </div>
@@ -30,264 +30,33 @@
   </section>
   <!-- /Hero Section -->
 
-
   <!-- About Us Section -->
-  <section id="about" class="about section py-5">
-    <!-- Section Title -->
-    <div class="container" data-aos="fade-up">
-      <div class="section-title text-center mb-5">
-        <h2>Qui sommes-nous</h2>
-      </div>
-
-      <div class="row align-items-center">
-        <!-- Colonne Image -->
-        <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left" data-aos-delay="200">
-          <img src="assets/images/team1.png" class="img-fluid rounded" alt="À propos de Technostrea">
-        </div>
-        <!-- Colonne Texte -->
-        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-          <h3 class="mb-4">Technostrea, l'innovation au service du Congo</h3>
-          <p>
-            Technostrea est née de la volonté d'apporter des solutions technologiques innovantes et adaptées aux besoins du quotidien des entreprises et des individus au Congo.
-          </p>
-          <p>
-            Nous sommes une équipe de passionnés, animée par des valeurs d'entraide, de dynamisme et d'ambition. Grâce à notre expertise informatique, nous avons contribué à la croissance technologique au Congo, en apportant des solutions concrètes aux défis quotidiens.
-          </p>
-          <p>
-            Notre équipe est dévouée à la création de technologies durables qui améliorent la qualité de vie et stimulent la performance des entreprises.
-          </p>
-          <a href="#contact" class="btn btn-primary mt-3">Contactez-nous</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-about/>
   <!-- /About Us Section -->
 
-  <!-- Values Section -->
-  <section id="values" class="values section dark-background">
-    <div class="container" data-aos="fade-up">
-      <!-- Section Header -->
-      <div class="section-header text-center mb-5">
-        <h2>Nos Valeurs</h2>
-        <p class="lead">
-          Chez Technostrea, nous sommes guidés par des valeurs d'entraide, de dynamisme et d’ambition.
-        </p>
-      </div>
-      <!-- End Section Header -->
-
-      <!-- Values Grid -->
-      <div class="row gy-5">
-        <!-- Value Item -->
-        <div class="col-md-6 col-lg-4">
-          <div class="value-box text-center p-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="value-icon mb-4">
-              <img src="assets/images/entraide.svg" class="img-fluid" alt="Entraide" width="80">
-            </div>
-            <h3 class="h4">Entraide</h3>
-            <p>
-              Nous accordons une attention particulière à chaque membre de notre équipe, car la bienveillance et l’entraide sont, pour nous, les clés d’un projet réussi.
-            </p>
-          </div>
-        </div>
-        <!-- End Value Item -->
-
-        <!-- Value Item -->
-        <div class="col-md-6 col-lg-4">
-          <div class="value-box text-center p-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="value-icon mb-4">
-              <img src="assets/images/dynamisme.svg" class="img-fluid" alt="Dynamisme" width="80">
-            </div>
-            <h3 class="h4">Dynamisme</h3>
-            <p>
-              Nous nous engageons à répondre efficacement aux besoins de nos clients. Réactifs par nature, nous aimons concrétiser nos projets rapidement.
-            </p>
-          </div>
-        </div>
-        <!-- End Value Item -->
-
-        <!-- Value Item -->
-        <div class="col-md-6 col-lg-4">
-          <div class="value-box text-center p-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="value-icon mb-4">
-              <img src="assets/images/ambition.svg" class="img-fluid" alt="Ambition" width="80">
-            </div>
-            <h3 class="h4">Ambition</h3>
-            <p>
-              Aucun projet n’est impossible pour nous. Nous n’hésitons pas à nous dépasser et sommes constamment en quête de nouveaux objectifs et solutions.
-            </p>
-          </div>
-        </div>
-        <!-- End Value Item -->
-      </div>
-      <!-- End Values Grid -->
-    </div>
-  </section>
-  <!-- /Values Section -->
-
   <!-- Services Section -->
-  <section id="services" class="services section light-background">
-    <!-- Section Title -->
-    <div class="container section-title text-center mb-5" data-aos="fade-up">
-      <h2>Nos Services</h2>
-      <p class="lead">Des solutions technologiques innovantes pour répondre à vos besoins</p>
-    </div>
-    <!-- End Section Title -->
-
-    <div class="container">
-      <div class="row gy-4">
-        <!-- Service Item -->
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-code-slash"></i>
-            </div>
-            <h4>Développement Web et Applications</h4>
-            <p>Création de sites web et d'applications mobiles sur mesure pour booster votre présence en ligne.</p>
-          </div>
-        </div>
-        <!-- End Service Item -->
-
-        <!-- Service Item -->
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-server"></i>
-            </div>
-            <h4>Gestion de l'Infrastructure IT</h4>
-            <p>Optimisation et maintenance de vos systèmes informatiques pour une performance maximale.</p>
-          </div>
-        </div>
-        <!-- End Service Item -->
-
-        <!-- Service Item -->
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-lightbulb"></i>
-            </div>
-            <h4>Conseil Stratégique en Technologie</h4>
-            <p>Accompagnement dans la définition et la mise en œuvre de votre stratégie technologique.</p>
-          </div>
-        </div>
-        <!-- End Service Item -->
-
-        <!-- Service Item -->
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-item text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-cloud-lock"></i>
-            </div>
-            <h4>Solutions Cloud et Sécurité</h4>
-            <p>Mise en place de solutions cloud sécurisées pour protéger et accéder à vos données à tout moment.</p>
-          </div>
-        </div>
-        <!-- End Service Item -->
-      </div>
-    </div>
-  </section>
+  <app-expertises/>
   <!-- /Services Section -->
 
-
-  <!-- Team Section -->
-  <section id="team" class="team section dark-background">
-
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2>Notre Équipe</h2>
-        <p>Rencontrez les membres passionnés de la StréaTeam.</p>
-      </div>
-      <div class="row gy-4">
-
-        <!-- Team Member 1 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-            <div class="member-img">
-              <img src="assets/images/team/team-1.jpg" class="img-fluid" alt="Styve Lioumba">
-            </div>
-            <div class="member-info">
-              <h4>Styve Lioumba</h4>
-              <span>Fondateur & CEO</span>
-              <p>Passionné par la technologie et l'innovation, Styve dirige Technostrea avec une vision tournée vers l'avenir.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ajoutez les autres membres de l'équipe de manière similaire -->
-
-      </div>
-    </div>
-
-  </section>
-  <!-- /Team Section -->
-
-  <!-- Team Section -->
-  <section class="team section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Notre équipe</h2>
-      <p>Découvrez les talents qui façonnent Technostrea</p>
-    </div>
-
-    <div class="container">
-      <div class="row gy-4">
-        <ng-container *ngIf="aboutTeamService.teams as teams">
-          <div class="col-sm-6 col-md-4" *ngFor="let user of teams; trackBy: trackByUserName">
-            <app-item-card-team [user]="user"></app-item-card-team>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-  </section>
-  <!-- /Team Section -->
-
   <!-- Projects Section -->
-  <section id="projects" class="projects section light-background">
-
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2>Nos Réalisations</h2>
-        <p>Découvrez quelques-uns de nos projets récents qui ont aidé nos clients à atteindre leurs objectifs.</p>
-      </div>
-
-      <div class="swiper-container projects-slider" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <!-- Project 1 -->
-          <div class="swiper-slide">
-            <div class="project-item">
-              <img src="assets/images/cubes-1210943_1280.jpg" class="img-fluid" alt="Projet 1" width="1280" height="960">
-              <h3>Projet 1</h3>
-              <p>Description brève du projet 1.</p>
-            </div>
-          </div>
-
-          <!-- Ajoutez d'autres projets ici -->
-
-        </div>
-
-        <!-- Swiper Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-
-    </div>
-
-  </section>
+  <app-projects/>
   <!-- /Projects Section -->
 
   <!-- Call To Action Section -->
   <section id="call-to-action" class="call-to-action section dark-background">
 
-    <img src="assets/images/bg-cta.png" alt="" class="background-image">
+    <img ngSrc="assets/images/bg-cta.png" alt="la strea" class="background-image" fill>
 
     <div class="container">
 
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
         <div class="col-xl-9 text-center text-xl-start">
           <h3>Faites le premier pas vers le succès technologique</h3>
-          <p>Rejoignez Technostrea et découvrez comment nous pouvons aider votre entreprise à se développer avec des solutions innovantes et sur mesure adaptées à vos besoins spécifiques.</p>
+          <p>Rejoignez Technostrea et découvrez comment nous pouvons aider votre entreprise à se développer avec des
+            solutions innovantes et sur mesure adaptées à vos besoins spécifiques.</p>
         </div>
         <div class="col-xl-3 cta-btn-container text-center">
-          <a class="cta-btn align-middle" href="#contact">Contactez-nous</a>
+          <a class="cta-btn align-middle" [routerLink]="['']" fragment="contact">Contactez-nous</a>
         </div>
       </div>
 
@@ -296,5 +65,8 @@
   </section>
   <!-- /Call To Action Section -->
 
+  <!-- Contact Section -->
+  <app-contact/>
+  <!-- /Contact Section -->
 
 </main>
