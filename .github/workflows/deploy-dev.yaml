@@ -46,4 +46,4 @@ jobs:
               echo "# Building the docker image"
               docker build -t technostrea/poc-technostrea:stabe-alpine .
               echo "# Suppression du dossier"
-              rm -rf /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/*
+              rm -rf /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/

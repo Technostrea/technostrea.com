@@ -7,11 +7,11 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a [routerLink]="['/home']" routerLinkActive="active">Accueil</a></li>
-        <li><a [routerLink]="['/about']" routerLinkActive="active">A propos </a></li>
-        <li><a [routerLink]="['/expertises']" routerLinkActive="active">Expertises</a></li>
-        <li><a [routerLink]="['/projects']" routerLinkActive="active">Projets</a></li>
-        <li><a [routerLink]="['/contact']" routerLinkActive="active" >Contact</a></li>
+        <li><a [routerLink]="['']" fragment='home' [class.active]="isActive('home')" >Accueil</a></li>
+        <li><a [routerLink]="['']" fragment="about" [class.active]="isActive('about')">A propos </a></li>
+        <li><a [routerLink]="['']" fragment="expertises" [class.active]="isActive('expertises')">Expertises</a></li>
+        <li><a [routerLink]="['']" fragment="projects" [class.active]="isActive('projects')">Projets</a></li>
+        <li><a [routerLink]="['']" fragment="contact" [class.active]="isActive('contact')">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>

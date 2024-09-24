@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {RouterLink} from "@angular/router";
+import {NgOptimizedImage} from "@angular/common";
+import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-card-team.component";
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink,
+    NgOptimizedImage,
+    ItemCardTeamComponent
+  ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

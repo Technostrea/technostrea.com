@@ -36,6 +36,7 @@ export const routes: Routes = [
     title: 'Page non trouvée',
     loadChildren: () => import('@app/routes/not-found/not-found.module').then(m => m.NotFoundModule)
   },
+  {path: 'home', redirectTo: '/', pathMatch: 'full'},
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: '**', redirectTo: '/not-found'}
 ];

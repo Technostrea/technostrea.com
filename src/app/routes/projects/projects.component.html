@@ -1,84 +1,36 @@
-<main class="main projects-page">
+<section class="bg-white" id="projects">
 
-  <!-- Section d'Introduction -->
-  <section class="hero section intro-section py-5 text-center" data-aos="fade-up">
-    <div class="container">
-      <h1 class="mb-3">Nos Projets</h1>
-      <p class="lead">Découvrez nos réalisations qui reflètent notre expertise et notre engagement envers l'innovation technologique.</p>
-    </div>
-  </section>
+  <article  class="projects bg-white ">
 
-  <!-- Projets Majeurs -->
-  <section class="major-projects py-5">
-    <div class="container">
-      <h2 class="mb-5 text-center" data-aos="fade-up">Projets Majeurs</h2>
-      <div class="row">
-        <div class="col-md-4"
-             *ngFor="let project of majorProjects; index as i"
-             data-aos="fade-up"
-             [attr.data-aos-delay]="100 * i">
-          <div class="card mb-4 shadow-sm">
-            <img [src]="project.image" class="card-img-top" [alt]="project.title">
-            <div class="card-body">
-              <h5 class="card-title">{{project.title}}</h5>
-              <p class="card-text">{{project.description}}</p>
-              <p><strong>Technologies utilisées :</strong></p>
-              <ul class="list-inline">
-                <li class="list-inline-item badge bg-secondary" *ngFor="let tech of project.technologies">{{tech}}</li>
-              </ul>
-              <a [href]="project.link" class="btn btn-primary mt-3">En savoir plus</a>
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Nos Réalisations</h2>
+        <p>Découvrez quelques-uns de nos projets récents qui ont aidé nos clients à atteindre leurs objectifs.</p>
+      </div>
+
+      <div class="swiper-container projects-slider" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <!-- Project 1 -->
+          <div class="swiper-slide">
+            <div class="project-item">
+              <img ngSrc="assets/images/cubes-1210943_1280.jpg" class="img-fluid" alt="Projet 1" width="200"
+                   height="200">
+              <h3>Projet 1</h3>
+              <p>Description brève du projet 1.</p>
             </div>
           </div>
+
+          <!-- Ajoutez d'autres projets ici -->
+
         </div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
-    </div>
-  </section>
 
-  <!-- Projets en Cours -->
-  <section class="ongoing-projects py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-5 text-center" data-aos="fade-up">Projets en Cours</h2>
-      <div class="row">
-        <div class="col-md-6"
-             *ngFor="let project of ongoingProjects; index as i"
-             data-aos="fade-up"
-             [attr.data-aos-delay]="100 * i">
-          <div class="card mb-4 shadow-sm">
-            <div class="row no-gutters">
-              <div class="col-md-5">
-                <img [src]="project.image" class="img-fluid" [alt]="project.title">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title">{{project.title}}</h5>
-                  <p class="card-text">{{project.description}}</p>
-                  <div class="progress">
-                    <div class="progress-bar"
-                         role="progressbar"
-                         [style.width.%]="project.progress"
-                         [attr.aria-valuenow]="project.progress"
-                         aria-valuemin="0"
-                         aria-valuemax="100">
-                      {{project.progress}}%
-                    </div>
-                  </div>
-                  <!-- Optionnel : Ajoutez un bouton si nécessaire -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Appel à l'Action -->
-  <section class="call-to-action py-5 text-center" data-aos="zoom-in">
-    <div class="container">
-      <h3 class="mb-4">Vous avez un projet en tête ?</h3>
-      <p class="mb-4">Contactez-nous dès aujourd'hui pour discuter de la façon dont nous pouvons collaborer pour donner vie à vos idées.</p>
-      <a [routerLink]="['/contact']" class="btn btn-primary btn-lg">Contactez-nous</a>
-    </div>
-  </section>
+  </article>
 
-</main>
+</section>
