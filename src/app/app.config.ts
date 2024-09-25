@@ -10,6 +10,8 @@ import {
 import {routes} from './app.routes';
 import {provideAnimations} from "@angular/platform-browser/animations";
 import {provideHttpClient, withFetch} from "@angular/common/http";
+import {provideLottieOptions} from "ngx-lottie";
+import player from 'lottie-web';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,6 +26,9 @@ export const appConfig: ApplicationConfig = {
         }
       )),
     provideAnimations(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    provideLottieOptions({
+      player: () => player,
+    }),
   ]
 };

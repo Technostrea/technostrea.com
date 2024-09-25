@@ -19,7 +19,8 @@
           "options": {
             "allowedCommonJsDependencies": [
               "glightbox",
-              "aos"
+              "aos",
+              "lottie-web"
             ],
             "outputPath": "dist/",
             "index": "src/index.html",
