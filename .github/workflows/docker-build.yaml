@@ -34,7 +34,7 @@ jobs:
         with:
           tags: lastrea/technostrea:latest
           push: false
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           load: true
 
       # 5. Vérification de la taille de l'image construite
