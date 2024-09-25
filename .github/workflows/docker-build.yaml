@@ -25,6 +25,8 @@ jobs:
       # 3. Configuration de Docker Buildx pour la construction multi-arch
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64
 
       # 4. Test de la construction du Dockerfile pour les architectures amd64 et arm64
       - name: Build local container
