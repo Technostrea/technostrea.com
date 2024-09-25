@@ -44,6 +44,6 @@ jobs:
               cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
               cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/poc-traefik/.env .env
               echo "# Building the docker image"
-              docker build -t technostrea/poc-technostrea:stabe-alpine .
+              docker buildx build --plateform linux/amd64,linux/arm64 -t technostrea/poc-technostrea:stabe-alpine .
               echo "# Suppression du dossier"
               rm -rf /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
