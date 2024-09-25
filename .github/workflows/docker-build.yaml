@@ -48,7 +48,7 @@ jobs:
         with:
           image: "lastrea/technostrea:latest"
           fail-build: true
-          severity-cutoff: critical
+          severity-cutoff: high
           output-format: sarif
 
       - name: Upload Anchore Scan SARIF Report
