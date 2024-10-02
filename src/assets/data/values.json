@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "name": "Entraide",
+      "description": " Nous accordons une attention particulière à chaque membre de notre équipe, car la bienveillance et l’entraide sont, pour nous, les clés d’un projet réussi.",
+      "image": "./assets/images/entraide.svg"
+    },
+    {
+      "name": "Dynamisme",
+      "description": "Nous nous engageons à répondre efficacement aux besoins de nos clients. Réactifs par nature, nous aimons concrétiser nos projets rapidement.",
+      "image": "./assets/images/dynamisme.svg"
+    },
+    {
+      "name": "Ambition",
+      "description": "Aucun projet n’est impossible pour nous. Nous n’hésitons pas à nous dépasser et sommes constamment en quête de nouveaux objectifs et solutions.",
+      "image": "./assets/images/ambition.svg"
+    }
+  ]
+}

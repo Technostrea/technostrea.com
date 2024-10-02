@@ -51,6 +51,19 @@
           "className": "bi bi-linkedin"
         }
       ]
+    },
+    {
+      "name": "Espery  Mulundu",
+      "role": "Développeur Backend",
+      "picture": "./assets/images/team/emu.jpg",
+      "description": "Développeur Backend",
+      "socialLinks": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/in/espery-mulundu/",
+          "className": "bi bi-linkedin"
+        }
+      ]
     }
   ]
 }

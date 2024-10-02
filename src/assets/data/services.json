@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "Développement Web et Applications",
+      "description": "Création de sites web et d'applications mobiles sur mesure pour booster votre présence en ligne.",
+      "className": "bi bi-code-slash"
+    },
+    {
+      "name": "Gestion de l'Infrastructure IT",
+      "description": "Optimisation et maintenance de vos systèmes informatiques pour une performance maximale.",
+      "className": "bi bi-server"
+    },
+    {
+      "name": "Conseil Stratégique en Technologie",
+      "description": "Accompagnement dans la définition et la mise en œuvre de votre stratégie technologique.",
+      "className": "bi bi-lightbulb"
+    },
+    {
+      "name": "Solutions Cloud et Sécurité",
+      "description": "Mise en place de solutions cloud sécurisées pour protéger et accéder à vos données à tout moment.",
+      "className": "bi bi-shield-lock-fill"
+    }
+  ]
+}
