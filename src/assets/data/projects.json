@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "name": "Twendeno",
+      "description": "TWENDENO est une application innovante de navigation urbaine qui utilise une cartographie avancée pour fournir des informations en temps réel sur les transports en commun, facilitant la mobilité et améliorant l'accessibilité et la durabilité des villes.",
+      "image": "./assets/projects/twendeno.jpeg",
+      "link": "#",
+      "status": "En cours"
+    },
+    {
+      "name": "Louka Loca",
+      "description": "Louka Loca est la nouvelle solution de recherche de logement entre particuliers et agences.",
+      "image": "./assets/projects/louka-loka.jpeg",
+      "link": "#",
+      "status": "En cours"
+    },
+    {
+      "name": "TrouveTonProfile",
+      "description": "Trouve ton profil est un annuaire de professionnel(le)s de différents corps de métiers.",
+      "image": "./assets/images/logo.jpg",
+      "link": "#",
+      "status": "En cours"
+    }
+  ]
+}

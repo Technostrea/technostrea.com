@@ -2,13 +2,8 @@
   color: #5497ff; /* pour indiquer le lien actif */
 }
 
-.image-logo{
-  max-width: 150px;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .image-logo {
-    max-width: 100px;
-  }
+.image-logo {
+  width: 200px; /* La taille du conteneur */
+  height: 100px; /* La taille du conteneur */
+  object-fit: cover; /* Coupe l'image pour remplir le conteneur */
 }
