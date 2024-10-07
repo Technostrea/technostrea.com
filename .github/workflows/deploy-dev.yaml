@@ -47,5 +47,8 @@ jobs:
               docker rmi technostrea/poc-technostrea:stabe-alpine -f
               echo "# Building the docker image"
               docker build -t technostrea/poc-technostrea:stabe-alpine .
+              echo "# Redemarrage du service"
+              cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/poc-traefik
+              docker compose up techostrea -d
               echo "# Suppression du dossier"
               rm -rf /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
