@@ -2,12 +2,12 @@
   <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
     <a [routerLink]="['']" class="logo d-flex align-items-center me-auto">
-      <h1 class="sitename">Technostréa</h1>
+      <h1><img src="assets/images/logo.svg" class="image-logo"  alt="logo-technostrea"/></h1>
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a [routerLink]="['']" fragment='home' [class.active]="isActive('home')" >Accueil</a></li>
+        <li><a [routerLink]="['']" fragment='home' [class.active]="isActive('home')">Accueil</a></li>
         <li><a [routerLink]="['']" fragment="about" [class.active]="isActive('about')">A propos </a></li>
         <li><a [routerLink]="['']" fragment="expertises" [class.active]="isActive('expertises')">Expertises</a></li>
         <li><a [routerLink]="['']" fragment="projects" [class.active]="isActive('projects')">Projets</a></li>

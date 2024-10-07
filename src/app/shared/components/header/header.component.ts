@@ -1,13 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {filter} from "rxjs";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    NgOptimizedImage
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -23,7 +25,6 @@ export class HeaderComponent implements OnInit{
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
       const fragment = this.router.url.split('#')[1];
-      console.log('Fragment:', fragment);
       this.activeFragment = fragment ? fragment : 'home'; // Par défaut 'home' si aucun fragment
     });
   }

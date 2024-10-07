@@ -1,18 +1,18 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-card-team.component";
-import {AboutTeamService} from "@app/core/services/data/about-team/about-team.service";
+import {TeamsComponent} from "@app/shared/components/teams/teams.component";
+import {ServicesComponent} from "@app/shared/components/services/services.component";
 
 @Component({
   selector: 'app-expertises',
   standalone: true,
   imports: [
-    ItemCardTeamComponent
+    ItemCardTeamComponent,
+    TeamsComponent,
+    ServicesComponent
   ],
   templateUrl: './expertises.component.html',
   styleUrl: './expertises.component.scss'
 })
 export class ExpertisesComponent {
-
-  protected aboutTeamService: AboutTeamService = inject(AboutTeamService);
-
 }

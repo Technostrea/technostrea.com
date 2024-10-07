@@ -20,7 +20,8 @@
             "allowedCommonJsDependencies": [
               "glightbox",
               "aos",
-              "lottie-web"
+              "lottie-web",
+              "leaflet"
             ],
             "outputPath": "dist/",
             "index": "src/index.html",
@@ -43,6 +44,7 @@
               "node_modules/aos/dist/aos.css",
               "node_modules/glightbox/dist/css/glightbox.min.css",
               "node_modules/swiper/swiper-bundle.min.css",
+              "node_modules/leaflet/dist/leaflet.css",
               "src/styles.scss"
             ],
             "scripts": [

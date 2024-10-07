@@ -22,12 +22,21 @@
   }
 
   .call-to-action {
-    background-image: url('/assets/images/bg-cta.png');
+    background-image: url("/assets/images/bg-cta.png");
     background-size: cover;
     background-position: center;
     color: #fff;
-    h3, p {
+    h3,
+    p {
       color: #fff;
     }
   }
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
