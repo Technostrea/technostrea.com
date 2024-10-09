@@ -1,72 +1,96 @@
 <main class="main" id="home">
-
   <!-- Hero Section -->
-  <section id="hero" class="hero section dark-background d-flex align-items-center">
+  <section
+    id="hero"
+    class="hero section dark-background d-flex align-items-center"
+  >
     <div class="container">
       <div class="row gy-5 align-items-center">
         <!-- Colonne de Texte -->
-        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
-          <h1 class="display-4 mb-4">
+        <div
+          class="col-12 col-lg-6 d-flex justify-content-start flex-column pt-3"
+          data-aos="fade-right"
+        >
+          <h1 class="display-5 mb-3 mb-lg-4">
             Bâtissons ensemble le futur du Congo
           </h1>
-          <p class="lead mb-4">
-            Une équipe passionnée dédiée à des solutions innovantes qui améliorent le quotidien grâce à la technologie.
+          <p class="lead mb-3 mb-lg-4">
+            Une équipe passionnée dédiée à des solutions innovantes qui
+            améliorent le quotidien grâce à la technologie.
           </p>
-          <div class="d-flex flex-wrap">
-            <a [routerLink]="['']" fragment="projects" class="btn btn-primary btn-lg me-3 mb-2">
+          <div class="d-flex flex-column flex-lg-row">
+            <a
+              [routerLink]="['']"
+              fragment="projects"
+              class="btn btn-primary btn-lg me-0 me-lg-3 mb-3 mb-lg-0"
+            >
               Découvrez nos projets
             </a>
-            <a [routerLink]="['']" fragment="join-us" class="btn btn-outline-light btn-lg mb-2">
+            <a
+              [routerLink]="['']"
+              fragment="join-us"
+              class="btn btn-outline-light btn-lg"
+            >
               Rejoignez-nous
             </a>
           </div>
         </div>
         <!-- Colonne d'Animation -->
-        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-left" data-aos-delay="200">
-          <app-adn-animation/>
+        <div
+          class="col-12 col-lg-6 d-flex justify-content-center"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <app-adn-animation />
         </div>
       </div>
     </div>
   </section>
+
   <!-- /Hero Section -->
 
   <!-- About Us Section -->
-  <app-about/>
+  <app-about />
   <!-- /About Us Section -->
 
   <!-- Services Section -->
-  <app-expertises/>
+  <app-expertises />
   <!-- /Services Section -->
 
   <!-- Projects Section -->
-  <app-projects/>
+  <app-projects />
   <!-- /Projects Section -->
 
   <!-- Call To Action Section -->
   <section id="call-to-action" class="call-to-action section dark-background">
-
-    <img ngSrc="assets/images/bg-cta.png" alt="la strea" class="background-image" fill>
+    <img
+      ngSrc="assets/images/bg-cta.png"
+      alt="la strea"
+      class="background-image"
+      fill
+    />
 
     <div class="container">
-
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
         <div class="col-xl-9 text-center text-xl-start">
           <h3>Faites le premier pas vers le succès technologique</h3>
-          <p>Rejoignez Technostrea et découvrez comment nous pouvons aider votre entreprise à se développer avec des
-            solutions innovantes et sur mesure adaptées à vos besoins spécifiques.</p>
+          <p>
+            Rejoignez Technostrea et découvrez comment nous pouvons aider votre
+            entreprise à se développer avec des solutions innovantes et sur
+            mesure adaptées à vos besoins spécifiques.
+          </p>
         </div>
         <div class="col-xl-3 cta-btn-container text-center">
-          <a class="cta-btn align-middle" [routerLink]="['']" fragment="contact">Contactez-nous</a>
+          <a class="cta-btn align-middle" [routerLink]="['']" fragment="contact"
+            >Contactez-nous</a
+          >
         </div>
       </div>
-
     </div>
-
   </section>
   <!-- /Call To Action Section -->
 
   <!-- Contact Section -->
-  <app-contact/>
+  <app-contact />
   <!-- /Contact Section -->
-
 </main>
