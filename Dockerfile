@@ -4,11 +4,12 @@ FROM node:20-alpine AS node-builder
 ARG APP_NAME=technostrea
 ARG ENVIRONMENT=production
 ARG NG_VERSION=18
-ARG NG_VERSION=18
+ARG BASE_REF=strea
 
 ENV APP_NAME=$APP_NAME
 ENV ENVIRONMENT=$ENVIRONMENT
 ENV NG_VERSION=$NG_VERSION
+ENV BASE_REF=$BASE_REF
 
 WORKDIR /app
 
@@ -20,7 +21,7 @@ RUN npm install -g @angular/cli@$NG_VERSION
 COPY . .
 
 RUN npm install --legacy-peer-deps
-RUN ng build --configuration=$ENVIRONMENT --output-path=dist/ --base-href /strea/
+RUN ng build --configuration=$ENVIRONMENT --output-path=dist/ --base-href /$BASE_REF/
 
 
 # ETAPE 2: Héberger l'application sur un serveur web nginx
