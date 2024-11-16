@@ -9,23 +9,25 @@ import {ExpertisesComponent} from "@app/routes/expertises/expertises.component";
 import {ProjectsComponent} from "@app/routes/projects/projects.component";
 import {ContactComponent} from "@app/routes/contact/contact.component";
 import {AdnAnimationComponent} from "@app/shared/components/adn-animation/adn-animation.component";
+import {LottieComponent} from "ngx-lottie";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    NgOptimizedImage,
-    RouterLink,
-    NgOptimizedImage,
-    ItemCardTeamComponent,
-    NgForOf,
-    NgIf,
-    AboutComponent,
-    ExpertisesComponent,
-    ProjectsComponent,
-    ContactComponent,
-    AdnAnimationComponent
-  ],
+    imports: [
+        NgOptimizedImage,
+        RouterLink,
+        NgOptimizedImage,
+        ItemCardTeamComponent,
+        NgForOf,
+        NgIf,
+        AboutComponent,
+        ExpertisesComponent,
+        ProjectsComponent,
+        ContactComponent,
+        AdnAnimationComponent,
+        LottieComponent
+    ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

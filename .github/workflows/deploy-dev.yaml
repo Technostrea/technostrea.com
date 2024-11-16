@@ -27,8 +27,8 @@ jobs:
           key: ${{ secrets.PI_SSH_KEY }}
           port: ${{ secrets.PI_SSH_PORT }}
           rm: true
-          source: "*"
-          target: /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
+          source: "."
+          target: /home/${{ secrets.PI_USER }}/wwwroot/poc-projects/poc-technostrea/
 
 
       # Decompresser l'image dans le serveur de dev
@@ -41,14 +41,9 @@ jobs:
           port: ${{ secrets.PI_SSH_PORT }}
           command_timeout: 30m
           script: |
-              cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
-              cp /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/poc-traefik/.env .env
-              docker container rm -f poc-technostrea
+              cd $HOME/wwwroot/poc-projects/poc-technostrea/
               docker rmi technostrea/poc-technostrea:stabe-alpine -f
               echo "# Building the docker image"
-              docker build -t technostrea/poc-technostrea:stabe-alpine .
-              echo "# Redemarrage du service"
-              cd /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-traefik/poc-traefik
-              docker compose up techostrea -d
+              docker build --build-arg BASE_REF=${{ secrets.BASE_REF }} -t technostrea/poc-technostrea:stabe-alpine .
               echo "# Suppression du dossier"
-              rm -rf /home/${{ secrets.PI_USER }}/Documents/poc-projects/poc-technostrea/
+              rm -rf $HOME/wwwroot/poc-projects/poc-technostrea/

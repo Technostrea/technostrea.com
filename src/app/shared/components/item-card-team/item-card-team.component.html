@@ -7,7 +7,7 @@
       <h4 class="text-black">{{ user.name }}</h4>
       <span>{{ user.role }}</span>
       <!--<p>{{ user.description }}</p>-->
-      <div class="social mt-2">
+      <div class="social mt-2 d-flex justify-content-center">
         @for (social of user.socialLinks; track social.url) {
           <a [href]="social.url" target="_blank" class="">
             <i class="{{social.className}} text-black-50"></i>

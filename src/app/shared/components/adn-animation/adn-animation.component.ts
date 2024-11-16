@@ -16,7 +16,7 @@ export class AdnAnimationComponent {
   private animationItem: AnimationItem | undefined;
 
   options: AnimationOptions = {
-    path: '/assets/animations/adn.json',
+    path: '/assets/animations/web.json',
     loop: true,
     autoplay: true
   };

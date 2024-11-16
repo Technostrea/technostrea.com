@@ -2,7 +2,7 @@
   "data": [
     {
       "name": "Styve Lioumba",
-      "role": "CEO & Fondateur",
+      "role": "Fondateur",
       "picture": "./assets/images/team/sli.jpg",
       "description": "Visionnaire et leader stratégique, Styve est à l'origine de la création de Technostrea et guide l'entreprise avec passion.",
       "socialLinks": [
@@ -22,45 +22,6 @@
         {
           "name": "linkedin",
           "url": "https://www.linkedin.com/in/benaja-bendo/",
-          "className": "bi bi-linkedin"
-        }
-      ]
-    },
-    {
-      "name": "Fatimata Diallo",
-      "role": "Responsable Marketing",
-      "picture": "https://api.dicebear.com/9.x/thumbs/svg?seed=Felix",
-      "description": "Fatimata est en charge de la stratégie de marketing et de communication, assurant la visibilité de Technostrea.",
-      "socialLinks": [
-        {
-          "name": "linkedin",
-          "url": "https://www.linkedin.com/in/fatimata-diallo/",
-          "className": "bi bi-linkedin"
-        }
-      ]
-    },
-    {
-      "name": "Ariel Vaba",
-      "role": "Responsable des Projets",
-      "picture": "./assets/images/team/ava.png",
-      "description": "Expert en gestion de projet, Ariel s'assure que chaque mission est exécutée dans les délais et répond aux exigences de qualité.",
-      "socialLinks": [
-        {
-          "name": "linkedin",
-          "url": "https://www.linkedin.com/in/ariel-vaba/",
-          "className": "bi bi-linkedin"
-        }
-      ]
-    },
-    {
-      "name": "Espery  Mulundu",
-      "role": "Développeur Backend",
-      "picture": "./assets/images/team/emu.jpg",
-      "description": "Développeur Backend",
-      "socialLinks": [
-        {
-          "name": "linkedin",
-          "url": "https://www.linkedin.com/in/espery-mulundu/",
           "className": "bi bi-linkedin"
         }
       ]
