@@ -1,6 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
-import {DataService} from "@app/core/services/data/home/data.service";
 import {AboutTeamService} from "@app/core/services/data/about-team/about-team.service";
 import {RouterLink} from "@angular/router";
 import {ItemCardTeamComponent} from "@app/shared/components/item-card-team/item-card-team.component";
@@ -14,25 +13,24 @@ import {LottieComponent} from "ngx-lottie";
 @Component({
   selector: 'app-home',
   standalone: true,
-    imports: [
-        NgOptimizedImage,
-        RouterLink,
-        NgOptimizedImage,
-        ItemCardTeamComponent,
-        NgForOf,
-        NgIf,
-        AboutComponent,
-        ExpertisesComponent,
-        ProjectsComponent,
-        ContactComponent,
-        AdnAnimationComponent,
-        LottieComponent
-    ],
+  imports: [
+    NgOptimizedImage,
+    RouterLink,
+    NgOptimizedImage,
+    ItemCardTeamComponent,
+    NgForOf,
+    NgIf,
+    AboutComponent,
+    ExpertisesComponent,
+    ProjectsComponent,
+    ContactComponent,
+    AdnAnimationComponent,
+    LottieComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  dataHomePage: any;
   aboutTeamService: AboutTeamService = inject(AboutTeamService);
   services = [
     {
@@ -62,13 +60,10 @@ export class HomeComponent implements OnInit {
   ];
 
 
-  constructor(private dataService: DataService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(data => {
-      this.dataHomePage = data;
-    });
   }
 
   trackByUserName(index: number, user: any): string {
