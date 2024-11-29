@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "name": "Styve Lioumba",
+      "role": "Fondateur",
+      "picture": "./assets/images/team/sli.jpg",
+      "description": "Visionnaire et leader stratégique, Styve est à l'origine de la création de Technostrea et guide l'entreprise avec passion.",
+      "socialLinks": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/in/styve-lioumba/",
+          "className": "bi bi-linkedin"
+        }
+      ]
+    },
+    {
+      "name": "Benaja Bendo",
+      "role": "Directeur Technique",
+      "picture": "./assets/images/team/bbe.jpg",
+      "description": "Responsable des solutions techniques, Benaja veille à la qualité et à l'efficacité des projets livrés par Technostrea.",
+      "socialLinks": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/in/benaja-bendo/",
+          "className": "bi bi-linkedin"
+        }
+      ]
+    }
+  ]
+}
