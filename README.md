@@ -50,11 +50,5 @@ Exécutez
 Exécutez
 
   ```bash
-    npx ng build --configuration production --base-href "https://technostrea.github.io/technostrea.com/"
-  ```
-
-ou
-
-  ```bash
  npx ng deploy --base-href=/technostrea.com/
  ````
