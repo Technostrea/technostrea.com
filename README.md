@@ -40,6 +40,21 @@ Exécutez
 ## Tests end-to-end
 
 Exécutez
+
   ```bash
     ng e2e
   ```
+
+## Deploiement
+
+Exécutez
+
+  ```bash
+    npx ng build --configuration production --base-href "https://technostrea.github.io/technostrea.com/"
+  ```
+
+ou
+
+  ```bash
+ npx ng deploy --base-href=/technostrea.com/
+ ````
