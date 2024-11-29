@@ -1,0 +1,37 @@
+.team-member {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.member-info h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-info span {
+  display: block;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.member-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.social a {
+  color: #555;
+  margin: 0 5px;
+  font-size: 1.2rem;
+}
+
+.social a:hover {
+  color: #007bff;
+}

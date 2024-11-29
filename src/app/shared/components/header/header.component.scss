@@ -1,0 +1,9 @@
+.active {
+  color: #5497ff; /* pour indiquer le lien actif */
+}
+
+.image-logo {
+  width: 200px; /* La taille du conteneur */
+  height: 100px; /* La taille du conteneur */
+  object-fit: cover; /* Coupe l'image pour remplir le conteneur */
+}

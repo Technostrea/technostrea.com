@@ -1,0 +1,27 @@
+<article id="values" class="portfolio-area portfolio-one section dark-background">
+  <div class="container" data-aos="fade-up">
+    <!-- Section Header -->
+    <div class="section-header section-title text-center mb-5">
+      <h2>NOS VALEURS</h2>
+      <p class="lead">
+        Chez Technostrea, nous sommes guidés par des valeurs d'entraide, de
+        dynamisme et d’ambition.
+      </p>
+    </div>
+    <!-- End Section Header -->
+    <!-- row -->
+    <div class="row grid">
+      @if (valueService.values; as values){
+        @for (value of values;track value.name){
+          <div class="col-lg-4 col-md-8 col-sm-10" data-filter="branding">
+            <app-item-card-value [value]="value"/>
+          </div>
+        }
+      }
+
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+</article>
+

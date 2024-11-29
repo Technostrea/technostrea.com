@@ -1,0 +1,64 @@
+<header
+  id="header"
+  class="header d-flex align-items-center fixed-top pb-0 pt-0"
+>
+  <div
+    class="container-fluid container-xl position-relative d-flex align-items-center"
+  >
+    <a [routerLink]="['']" class="logo d-flex align-items-center me-auto">
+      <h1>
+        <img
+          src="assets/images/logo.svg"
+          class="image-logo img-fluid w-50"
+          alt="logo-technostrea"
+        />
+      </h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li>
+          <a
+            [routerLink]="['']"
+            fragment="home"
+            [class.active]="isActive('home')"
+            >Accueil</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['']"
+            fragment="about"
+            [class.active]="isActive('about')"
+            >A propos
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="['']"
+            fragment="expertises"
+            [class.active]="isActive('expertises')"
+            >Expertises</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['']"
+            fragment="projects"
+            [class.active]="isActive('projects')"
+            >Projets</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['']"
+            fragment="contact"
+            [class.active]="isActive('contact')"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,99 @@
+/* Base styles */
+.section {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .col-lg-7, .col-lg-5 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Section specific */
+.about .content {
+  margin-bottom: 40px;
+}
+
+.why-us-img {
+  text-align: center;
+}
+
+.why-us-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flexbox layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-lg-7 {
+  flex: 2;
+}
+
+.col-lg-5 {
+  flex: 1;
+}
+
+/* FAQ Toggle */
+.faq-item {
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.faq-item h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+.faq-content {
+  display: none;
+  padding-top: 10px;
+}
+
+.faq-active .faq-content {
+  display: block;
+}
+
+.bi-chevron-right {
+  transition: transform 0.3s;
+}
+
+.faq-active .bi-chevron-right {
+  transform: rotate(90deg);
+}

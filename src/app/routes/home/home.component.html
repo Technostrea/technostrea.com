@@ -1,0 +1,90 @@
+<main class="main" id="home">
+  <!-- Hero Section -->
+  <section
+    id="hero"
+    class="hero section dark-background d-flex align-items-center"
+  >
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+        <!-- Colonne de Texte -->
+        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+          <h1 class="display-4 mb-4">
+            Des solutions sur mesure à votre mesure
+          </h1>
+          <p class="lead mb-4">
+            Notre expertise vous accompagne dans votre transformation digitale, en alliant performance et simplicité.
+          </p>
+          <div class="d-flex flex-column flex-lg-row">
+            <a
+              [routerLink]="['']"
+              fragment="projects"
+              class="btn btn-primary btn-lg me-0 me-lg-3 mb-3 mb-lg-0"
+            >
+              Découvrez nos projets
+            </a>
+            <a
+              [routerLink]="['']"
+              fragment="join-us"
+              class="btn btn-outline-light btn-lg"
+            >
+              Rejoignez-nous
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne d'Animation -->
+        <div class="col-12 col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-delay="200">
+          <app-adn-animation />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- /Hero Section -->
+
+  <!-- About Us Section -->
+  <app-about />
+  <!-- /About Us Section -->
+
+  <!-- Services Section -->
+  <app-expertises />
+  <!-- /Services Section -->
+
+  <!-- Projects Section -->
+  <app-projects />
+  <!-- /Projects Section -->
+
+  <!-- Call To Action Section -->
+  <section id="call-to-action" class="call-to-action section dark-background">
+    <img
+      ngSrc="assets/images/bg-cta.png"
+      alt="la strea"
+      class="background-image"
+      fill
+    />
+
+    <div class="container">
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-xl-9 text-center text-xl-start">
+          <h3>Faites le premier pas vers le succès technologique</h3>
+          <p>
+            Rejoignez Technostrea et découvrez comment nous pouvons aider votre
+            entreprise à se développer avec des solutions innovantes et sur
+            mesure adaptées à vos besoins spécifiques.
+          </p>
+        </div>
+        <!--<div class="col-xl-3 cta-btn-container text-center">
+          <a class="cta-btn align-middle" [routerLink]="['']" fragment="contact"
+            >Contactez-nous</a
+          >
+        </div>-->
+      </div>
+    </div>
+  </section>
+  <!-- /Call To Action Section -->
+
+  <!-- Contact Section -->
+  <app-contact />
+  <!-- /Contact Section -->
+</main>

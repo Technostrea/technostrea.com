@@ -1,0 +1,28 @@
+<section id="projects" class="portfolio bg-white">
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header section-title">
+      <h2>NOS REALISATIONS</h2>
+      <p>
+        Découvrez quelques-uns de nos projets récents qui ont aidé nos clients
+        à atteindre leurs objectifs.
+      </p>
+    </div>
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        @if (projectService.projects; as projects) {
+          @for (project of projects; track project.name) {
+            <div class="col-lg-4 col-md-6 ">
+              <app-item-card-project [project]="project"/>
+            </div>
+          }
+        }
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Portfolio Section -->

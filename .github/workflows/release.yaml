@@ -1,0 +1,23 @@
+name: Release & Publish to NPM
+
+on: workflow_dispatch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Initialize Git user
+        run: |
+          git config --global user.email "contact@technostrea.fr"
+          git config --global user.name "technostrea"
+
+      - name: Log git status
+        run: git status
+
+      - name: Run release
+        run: npm run release --ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

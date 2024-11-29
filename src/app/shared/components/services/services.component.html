@@ -1,0 +1,21 @@
+<article class="services section bg-white">
+  <!-- Section Title -->
+  <div class="container section-title text-center mb-5" data-aos="fade-up">
+    <h2>Nos Services</h2>
+    <p class="lead">Des solutions technologiques innovantes pour répondre à vos besoins</p>
+  </div>
+  <!-- End Section Title -->
+
+  @if (expertiseService.expertises; as expertises) {
+    <div class="container">
+      <div class="row gy-4">
+        @for (expertise of expertises; track expertise.name) {
+          <div class="col-lg-3 col-md-6 align-items-center">
+            <app-item-card-service [expertise]="expertise"/>
+          </div>
+        }
+      </div>
+    </div>
+
+  }
+</article>
